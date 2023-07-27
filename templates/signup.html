@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sign-up page</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header> <ul id="head">
+			<li>ConnectBuzz</li>	
+			<li><form action="https://formsubmit.io/send/g.sometech@gmail.com" method="post">
+				<input type="text" name="search" placeholder="lay a complain here? ">
+				<button type="submit" >Send</button>
+			</form></li>
+			<a href="{{url_for('home')}}" onclick="alert('Thanks for using ConnectBuzz!')" value="Click Me!"><li>Logout</li></a>	
+		</ul>
+</header>
+
+
+<div class="leading">
+
+	<div class="head">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<img src="{{images}}">
+	</div>
+
+<h2>ConnectBuzz</h2>	
+
+
+<ul id="navigations">
+	<a href="{{url_for('home')}}"><li>Home</li></a>
+	<a href="{{url_for('about')}}"><li>About</li></a>
+	<a href="{{url_for('login')}}"><li>Login</li></a>
+	<a href="{{url_for('signup')}}"><li>Signup</li></a>
+</ul>
+
+
+</div>
+
+<div class="form">
+	<h3>Sign-up page</h3>
+	<h3 style="color:red">{{error1}}</h3>
+	<h3 style="color:red">{{error2}}</h3>
+	<h3 style="color:red">{{error3}}</h3>
+	<h3 style="color:red">{{error4}}</h3>
+	<h3 style="color:red">{{error5}}</h3>
+	<h3 style="color:red">{{stringt}}</h3>
+<form method="post" action="/process" enctype="multipart/form-data">
+  <label for="usname">User Name:</label><br>
+  <input type="text" id="usname" name="usname"><br><br>
+  <label for="country">Country:</label><br>
+  <input type="text" id="country" name="country"><br><br>
+  <label for="state">State:</label><br>
+  <input type="text" id="state" name="state"><br><br>
+  <label for="location">Location:</label><br>
+  <input type="text" id="location" name="location"><br><br>
+  <label for="sk">Your Skill:</label><br>
+  <input type="text" id="sk" name="sk"><br><br>
+  <label for="gmail">E-mail Address (optional):</label><br>
+  <input type="text" id="gmail" name="gmail"><br><br>
+  <label for="contact">Phone Number:</label><br>
+  <input type="number" id="contact" name="contact"><br><br>
+  <label for="sk">Profile Image:</label><br>
+  <input type="file" id="pf" name="pf"><br><br>
+  <label for="absk">About Your Job:</label><br>
+  <textarea type="text" id="absk" name="absk"></textarea><br><br>
+  <label for="pass">Password:</label><br>
+  <input type="password" id="pf" name="password"><br><br>
+  <label for="repass">Confirm Password:</label><br>
+  <input type="password" id="rpf" name="re-password"><br><br>
+  <button type="submit" id="button">Sign-up</button>
+</form>
+	
+</div>
+
+
+<div class="i">
+	<i id="i">"get a job done by searching for someone with the skill in your location"</i>
+</div>
+
+
+<div class="header">
+		<h1 id="title">G-some Technology</h1>
+</div>
+
+</body>
+</html>

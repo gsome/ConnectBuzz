@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ConnectBuzz</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header> <ul id="head">
+			<li>ConnectBuzz</li>	
+			<li><form action="https://formsubmit.io/send/g.sometech@gmail.com" method="post">
+				<input type="text" name="search" placeholder="lay a complain here? ">
+				<button type="submit" >Send</button>
+			</form></li>
+			<a href="{{url_for('home')}}" onclick="alert('Thanks for using ConnectBuzz!')" value="Click Me!"><li>Logout</li></a>	
+		</ul>
+</header>
+
+
+<div class="leading">
+
+	<div class="head">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<img src="{{url_for('static', filename='pics/' + update.image)}}">
+	</div>
+
+<h2>{{update.name}}</h2>	
+
+
+<ul id="navigations">
+	<a href="{{url_for('home')}}"><li>Home</li></a>
+	<a href="{{url_for('about')}}"><li>About</li></a>
+	<a href="{{url_for('login')}}"><li>Login</li></a>
+	<a href="{{url_for('signup')}}"><li>Signup</li></a>
+</ul>
+
+
+</div>
+
+<div class="form">
+	<h3>Edit Your Profile (Please Erase The Only field You Want To Edit)</h3>
+	
+<form method="POST" action="/edit/{{update.id}}" enctype="multipart/form-data">
+  <label for="usname">User Name:</label><br>
+  <input type="text" id="usname" name="usname" value="{{update.name}}"><br><br>
+  <label for="country">Country:</label><br>
+  <input type="text" id="country" name="country" value="{{update.country}}"> <br><br>
+  <label for="state">State:</label><br>
+  <input type="text" id="state" name="state" value="{{update.state}}"><br><br>
+  <label for="location">Location:</label><br>
+  <input type="text" id="location" name="location" value="{{update.location}}"><br><br>
+  <label for="sk">Your Skill:</label><br>
+  <input type="text" id="sk" name="sk" value="{{update.skill}}"><br><br>
+   <label for="contact">Number:</label><br>
+  <input type="text" id="contact" name="newnumber" value="{{update.number}}"><br><br>
+  <label for="gmail">E-mail Address (optional):</label><br>
+  <input type="text" id="gmail" name="email" value="{{update.email}}"><br><br>
+  <label for="abt">About Your Job:</label><br>
+  <input type="text" id="abt" name="absk" value="{{update.abt}}"><br><br>
+ 
+  
+  <button type="submit" id="button">Update</button>
+
+</form>
+	
+</div>
+
+
+<div class="i">
+	<i id="i">"get a job done by searching for someone with the skill in your location"</i>
+</div>
+
+
+<div class="header">
+		<h1 id="title">G-some Technology</h1>
+</div>
+
+</body>
+</html>

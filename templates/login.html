@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login page</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header> <ul id="head">
+			<li>ConnectBuzz</li>	
+			<li><form action="https://formsubmit.io/send/g.sometech@gmail.com" method="post">
+				<input type="text" name="search" placeholder="lay a complain here? ">
+				<button type="submit" >Send</button>
+			</form></li>
+			<a href="{{url_for('home')}}" onclick="alert('Thanks for using ConnectPro!')" value="Click Me!"><li>Logout</li></a>	
+		</ul>
+</header>
+
+
+<div class="leading">
+
+	<div class="head">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<img src="{{images}}">
+	</div>
+
+<h2>ConnectBuzz</h2>	
+<ul id="navigations">
+	<a href="{{url_for('home')}}"><li>Home</li></a>
+	<a href="{{url_for('about')}}"><li>About</li></a>
+	<a href="{{url_for('login')}}"><li>Login</li></a>
+	<a href="{{url_for('signup')}}"><li>Signup</li></a>
+</ul>
+
+
+</div>
+
+<div class="form">
+	<h3>Login page</h3>
+	<h3 style="color:red">{{message}}</h3>
+	<h3 style="color:red">{{error4}}</h3>
+	<h3 style="color:lightgreen">{{success}}</h3>
+	<h3 style="color:red">{{message2}}</h3>
+	<h3 style="color:lightgreen">{{message5}}</h3>
+	<h3 style="color:red">{{message1}}</h3>
+<form action="/verify" method="post">
+  <label for="username">Phone No:</label><br>
+  <input type="text" id="username" name="phone"><br>
+  <label for="password">Password:</label><br>
+  <input type="password" id="password" name="password"><br>
+  <button type="submit" id="button">Login</button>
+</form>
+	<p>don't have an account <a href="{{url_for('signup')}}" style="color: red">signup</a></p>
+	<b><p style="color: red">If you see any error, you either do not have an account or your number was inputed incorrectly. </p></b>
+</div>
+
+
+<div class="i">
+	<i id="i">"get a job done by searching for someone with the skill in your location"</i>
+</div>
+
+
+<div class="header">
+		<h1 id="title">G-some Technology</h1>
+</div>
+
+</body>
+</html>

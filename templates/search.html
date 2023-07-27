@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>search page</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header> <ul id="head">
+			<li>ConnectBuzz</li>	
+			<li><form action="https://formsubmit.io/send/g.sometech@gmail.com" method="post">
+				<input type="text" name="search" placeholder="lay a complain here? ">
+				<button type="submit" >Send</button>
+			</form></li>
+			<a href="{{url_for('home')}}" onclick="alert('Thanks for using ConnectBuzz!')" value="Click Me!"><li>Logout</li></a>	
+		</ul>
+</header>
+
+
+<div class="leading">
+
+	<div class="head">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<img src="{{images}}">
+	</div>
+
+<h2>ConnectBuzz</h2>	
+
+<ul id="navigations">
+	<a href="{{url_for('home')}}"><li>Home</li></a>
+	<a href="{{url_for('about')}}"><li>About</li></a>
+	<a href="{{url_for('login')}}"><li>Login</li></a>
+	<a href="{{url_for('signup')}}"><li>Signup</li></a>
+</ul>
+
+
+</div>
+
+<div class="search">
+	<h3 style="color: red">search result For: {{jobname}}</h3>
+	{% for search in search%}
+
+<style type="text/css">
+		img {
+  border-radius: 50%;
+  
+  width: 129px;
+  height: 129px;
+}
+</style>
+
+	<img src="{{url_for('static', filename='pics/' + search.image)}}">
+	<h4>{{search.name}}</h4>
+	<h4>{{search.skill}}</h4>
+	<h4>{{search.country}} \ {{search.state}} \ {{search.location}} </h4>
+	<h4>{{search.email}}</h4>
+	<h4>{{search.abt}}</h4>
+	<h4>Ratings: {{search.rating}}, Report: {{search.report}}</h4>
+	<ul id="search">
+		<li><a href="tel:{{search.number}}">Call Me</a></li>
+		<li><form action="/rate/{{search.id}}" method="post"><button type="submit">Rate Me</button></form></li>
+		<li><form action="/report/{{search.id}}" method="post"><button type="submit">Report Me</button></form></li>
+
+	</ul>
+	<hr>
+	{% endfor %}
+
+	
+</div>
+
+
+<div class="i">
+	<i id="i">"get a job done by searching for someone with the skill in your location"</i>
+</div>
+
+
+<div class="header">
+		<h1 id="title">G-some Technology</h1>
+</div>
+
+</body>
+</html>

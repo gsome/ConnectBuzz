@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>about page</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header> <ul id="head">
+			<li>ConnectBuzz</li>	
+			<li><form action="https://formsubmit.io/send/g.sometech@gmail.com" method="post">
+				<input type="text" name="search" placeholder="lay a complain here? ">
+				<button type="submit" >Send</button>
+			</form></li>
+			<a href="{{url_for('home')}}" onclick="alert('Thanks for using ConnectBuzz!')" value="Click Me!"><li>Logout</li></a>	
+		</ul>
+</header>
+
+
+<div class="leading">
+
+	<div class="head">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<img src="{{images}}">
+	</div>
+
+<h2>ConnectBuzz</h2>	
+
+<ul id="navigations">
+	<a href="{{url_for('home')}}"><li>Home</li></a>
+	<a href="{{url_for('about')}}"><li>About</li></a>
+	<a href="{{url_for('login')}}"><li>Login</li></a>
+	<a href="{{url_for('signup')}}"><li>Signup</li></a>
+</ul>
+
+
+</div>
+
+<div class="search">
+	<h3>About page</h3>
+	<p><b>ConnectBuzz</b> is an official website from 'G-some Technology' ment for connecting professionals in various fields
+	to get individuals urgent jobs done, it has a reliable and convinient standards and an easy user interface.</p>
+	<p><b>And be sure we give reliable, standard and deligent professionals to get your job done.</b></p>
+	<p><b>G-some Technology</b></p>
+	<h5>Tel   : 09152969136 </h5>
+	<h5>Join our Whatsapp group for update: <a href="https://chat.whatsapp.com/BRpmAPJ1DFwAHDJ6OeYPLB">https://chat.whatsapp.com/BRpmAPJ1DFwAHDJ6OeYPLB</a> </h5>
+	<h5>E-mail: g.sometech@gmail.com </h5>
+	
+</div>
+
+<style type="text/css">
+	b{
+		text-align: center;
+	}
+
+</style>
+
+<div class="i">
+	<i id="i">"get a job done by searching for someone with the skill in your location"</i>
+</div>
+
+
+<div class="header">
+		<h1 id="title">G-some Technology</h1>
+</div>
+
+</body>
+</html>

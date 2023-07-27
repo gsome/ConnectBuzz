@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login page</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header> <ul id="head">
+			<li>ConnectBuzz</li>	
+			<li><form action="https://formsubmit.io/send/g.sometech@gmail.com" method="post">
+				<input type="text" name="search" placeholder="lay a complain here? ">
+				<button type="submit" >Send</button>
+			</form></li>
+			<a href="{{url_for('home')}}" onclick="alert('Thanks for using ConnectBuzz!')" value="Click Me!"><li>Logout</li></a>	
+		</ul>
+</header>
+
+
+<div class="leading">
+
+	<div class="head">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<img src="{{url_for('static', filename='pics/' + num.image)}}">
+	</div>
+
+<h2>{{num.name}}</h2>	
+<h2>{{num.skill}}</h2>	
+
+<ul id="navigations">
+	<a href="{{url_for('home')}}"><li>Home</li></a>
+	<a href="{{url_for('about')}}"><li>About</li></a>
+	<a href="{{url_for('login')}}"><li>Login</li></a>
+	<a href="{{url_for('signup')}}"><li>Signup</li></a>
+</ul>
+
+
+</div>
+
+<div class="wrap">
+
+<h1>My Profile</h1>
+	<ul>
+		<li>Country : {{num.country}}</li>
+		<li>state   : {{num.state}}</li>
+		<li>Location: {{num.location}}</li>
+		<li>Email   : {{num.email}}</li>
+		<li style="color: red"><a href="/edit/{{num.id}}">Edit Your Profile</a></li>
+		
+	</ul>
+<div class="content">
+	<h2>About my skill</h2>
+	<p>{{num.abt}}</p>
+</div>
+<aside>
+	<h2>Secured Infos:</h2>
+	<ul>
+		<li style="color: red">Number: {{num.number}}</li>
+		<li style="color: black">Report: {{num.report}}</li>
+		<li style="color: red">Ratings: {{num.rating}}</li>
+
+		<p>Make sure your phone number is correct, people will call you using this app</p>
+	</ul>
+</aside>
+
+
+</div>
+
+
+<div class="form">
+	<h3>Get someone quickly</h3>
+<form action="/profilesearch" method="post">
+  <label for="jobname">Job Name:</label><br>
+  <input type="text" id="jobname" name="jobname"><br>
+  <label for="location">State: (optional)</label><br>
+  <input type="text" id="location" name="location"><br>
+  <label for="place">Place: (optional)</label><br>
+  <input type="text" id="place" name="place"><br><br>
+  <button type="submit" id="button">Search</button>
+</form>
+	
+</div>
+
+
+<div class="search">
+	<h3>{{result}}</h3>
+
+	
+</div>
+
+<div class="header">
+		<h1 id="title">G-some Technology</h1>
+</div>
+
+</body>
+</html>
