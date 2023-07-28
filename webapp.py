@@ -387,4 +387,4 @@ def report(id):
 		return ('invalid request')
 
 
-app.run(debug=True) 
+app.run(host="0.0.0.0", port=5000) 
